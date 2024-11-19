@@ -1,4 +1,12 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_EXCLUDES = cmd
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
+
+# One of the tests requires cap_net_raw, so run tests under autopkgtest
+override_dh_auto_test:
+
+autopkgtest:
+	dh_auto_test -O--builddirectory=_build -O--buildsystem=golang

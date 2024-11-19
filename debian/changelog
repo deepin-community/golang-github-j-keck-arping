@@ -1,5 +1,55 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-j-keck-arping (1.0.3-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
+  * d/control:
+    - Update Standards-Version (no changes needed)
+    - Update my email address
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Mathias Gibbens <gibmat@debian.org>  Sat, 29 Oct 2022 13:46:40 +0000
+
+golang-github-j-keck-arping (1.0.2-1) unstable; urgency=medium
+
+  [ Aloïs Micard ]
+  * update debian/gitlab-ci.yml (using pkg-go-tools/ci-config)
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13
+  * Set upstream metadata fields: Bug-Database, Bug-Submit,
+    Repository, Repository-Browse
+  * Update standards version to 4.5.1, no changes needed
+
+  [ Dmitry Smirnov ]
+  * Standards-Version: 4.5.0.
+
+  [ Mathias Gibbens ]
+  * New upstream release
+  * Add myself to Uploaders
+  * Update d/control
+    - Update team's Maintainer email address
+    - Update Section to golang
+    - Update Standards-Version (no changes needed)
+    - Add Rules-Requires-Root: no
+    - Add Multi-Arch: foreign
+  * Update d/copyright
+    - Remove unneeded Files-Excluded
+    - Add myself
+  * Update d/rules and d/watch
+  * Only run tests within autopkgtest, as one of them requires
+    root/cap_net_raw permissions
+
+ -- Mathias Gibbens <mathias@calenhad.com>  Wed, 09 Feb 2022 00:56:17 +0000
+
+golang-github-j-keck-arping (1.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.1.
+  * DH & compat to version 12.
+  * watch file to track tagged releases.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 19 Oct 2019 11:19:44 +1100
+
+golang-github-j-keck-arping (0.0~git20160618.2cf9dc6-1) unstable; urgency=medium
+
+  * Initial release (Closes: #906913).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 22 Aug 2018 18:33:18 +1000
